@@ -1,0 +1,2 @@
+# wazuh
+SIEM Home Lab
