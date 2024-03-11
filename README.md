@@ -7,4 +7,4 @@ The following are the different systems used throughout my project:
 -Wazuh Stack: Single-Node configuration consisting of Wazuh Manager, Wazuh Indexer, & Wazuh Dashboard.
 -XCP-ng: Server hosting VMs
 -VMs: Kali Linux, Parrot
-
+![download](https://github.com/bmcda37/IndependentResearch-SIEM/assets/157663194/87663463-8274-47f4-a247-827f40eafc92)
