@@ -16,7 +16,7 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 10.0.0.0/24
+        - subnet: <enter your subnet for your network>
 ```
 
 ## Docker Bridge Network
