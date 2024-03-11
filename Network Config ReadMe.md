@@ -2,13 +2,13 @@
 
 ## Docker-Compose.yml File
 
-### For each service defined in your docker-compose.yml file, ensure you have defined your network for each service.
+For each service defined in your docker-compose.yml file, ensure you have defined your network for each service.
 ```
     networks:
       - custom-network
 ```
 
-### At the bottom of your docker-compose.yml file add the following lines of code:
+At the bottom of your docker-compose.yml file add the following lines of code:
 ```
 networks:
   custom-network:
