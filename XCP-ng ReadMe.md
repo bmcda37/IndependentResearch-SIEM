@@ -12,7 +12,7 @@ Now we will begin adding VMs to my server.
 
 - Create a shareable file on my system to ensure the xcp-ng server can retrieve any iso files on my host. 
 - Use your IP address of the host machine followed by the path to the shareable folder where your iso files are located.
--- Use cmd ipconfig to find the IP address of the host machine.
+    - Use cmd ipconfig to find the IP address of the host machine.
 - 
 
 
