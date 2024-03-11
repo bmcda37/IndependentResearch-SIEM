@@ -1,4 +1,18 @@
-# Configuration for Docker Compose, Docker Bridge Network, &  Port Forwarding
+# Configuration of Docker Compose, Docker Bridge Network, &  Port Forwarding
+
+## Purpose
+
+Our Docker-Compose.yml file is located at ```/wazuh-docker/single-node``` . Once within our directory, we will be able to run the ```docker-compose up -d```
+cmd to run all the containers outlined in our compose.
+
+Docker Compose allows us to group our containers within one network which is created by Docker. Within this group, the docker containers can be ran together while allowing them to communicate with each other. This is beneficial for our Wazuh cluster since we will need the Wazuh Manager, Wazuh Indexer, and Wazuh Dashboard to send/recieve data.
+
+
+
+
+
+
+
 
 ## Docker-Compose.yml File
 
