@@ -46,5 +46,5 @@ networks:
         - subnet: <ip of subnet for your network>
 ```
 
-## Port Fowarding (Xcp-ng -> Host -> Docker-Compose)
+## Port Fowarding (XCP-ng -> Host -> Docker-Compose)
 
