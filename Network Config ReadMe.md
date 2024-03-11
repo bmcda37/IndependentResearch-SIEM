@@ -1,4 +1,4 @@
-# Setting Up Network for Docker Compose, Docker Bridge Network, Port Forwarding
+# Configuration for Docker Compose, Docker Bridge Network, &  Port Forwarding
 
 ## Docker-Compose.yml File
 
