@@ -3,6 +3,7 @@ For my home SIEM lab, I decided to go with Wazuh. I am using the single-node opt
 
 ## Skills Gained Through Project
 - Linux File System
+- scp, ssh
 - Docker/Docker Compose configuration
 - Networking Concepts: Subnetting, Port Forwarding, Virtualization Management
 - GitHub, GitHub Projects, Python, Bash, VScode, WSL
