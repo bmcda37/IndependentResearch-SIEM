@@ -7,4 +7,3 @@ The following are the different systems used throughout my project:
 -XCP-ng: Server hosting VMs
 -VMs: Kali Linux, Parrot
 
-Networking:
