@@ -1,6 +1,8 @@
-## Setting Up Network for Docker Compose, Docker Bridge Network, Port Forwarding Through Host Machine
+# Setting Up Network for Docker Compose, Docker Bridge Network, Port Forwarding
 
-# Docker-Compose.yml File
+## Docker-Compose.yml File
 
-# Docker Bridge Network
+## Docker Bridge Network
+
+## Port Fowarding Xcp-ng -> Host -> Docker-Compose
 
