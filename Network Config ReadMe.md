@@ -8,7 +8,7 @@ For each service defined in your docker-compose.yml file, ensure you have define
       - custom-network
 ```
 
-At the bottom of your docker-compose.yml file add the following lines of code:
+After defining the services for your docker-compose, add the following to the bottom of your docker-compose.yml file:
 ```
 networks:
   custom-network:
@@ -34,5 +34,5 @@ networks:
         - subnet: <ip of subnet for your network>
 ```
 
-## Port Fowarding Xcp-ng -> Host -> Docker-Compose
+## Port Fowarding (Xcp-ng -> Host -> Docker-Compose)
 
