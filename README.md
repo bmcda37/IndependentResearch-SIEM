@@ -1,11 +1,12 @@
 # My Independent Research using SIEM technologies and integrations
 For my home SIEM lab, I decided to go with Wazuh. I am using the single-node option since I do not need more.
 
-## Skills Gained Through Project
+## Skills/Technologies Within Project
 - Linux File System
 - scp, ssh
-- Docker/Docker Compose configuration
+- Docker/Docker Compose configuration, Portaniner 
 - Networking Concepts: Subnetting, Port Forwarding, Virtualization Management
+- Twingate (ZTNA Solution)for remote access
 - GitHub, GitHub Projects, Python, Bash, VScode, WSL
 
 ## Technologies used within project:
