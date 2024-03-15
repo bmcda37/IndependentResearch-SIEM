@@ -98,6 +98,25 @@ services:
       - wazuh.indexer:wazuh.indexer
       - wazuh.manager:wazuh.manager
 
+  twingate_connector:
+    container_name: twingate_connector
+    image: twingate/connector:latest
+    environment:
+      - TWINGATE_NETWORK=befarm
+      - TWINGATE_ACCESS_TOKEN=eyJhbGciOiJFUzI1NiIsImtpZCI6IjBUZGNySlpmWm5rTUVvS2ZIejVsbEpkR0IxWkdDSlg4VDZtMXRHbXljaWMiLCJ0eXAiOiJEQ>
+      - TWINGATE_REFRESH_TOKEN=0d4XAMz8adGi3Bg1EW5cmqzJ16CGN6g20wUmSUEgbvqlzgvNryNjpnZGxZ5S-fZm9KreyA4o-0zsaMkUlQYaEGCsgfpuPq-ZrBoI>
+      # -- (Optional) Change loglevel
+      # - TWINGATE_LOG_LEVEL=3
+      # -- (Optional) Add custom DNS Server
+      # - TWINGATE_DNS=10.20.0.1
+    sysctls:
+      net.ipv4.ping_group_range: "0 2147483647"
+    # -- (Optional) When using a custom network
+    # networks:
+      #- single-node_default 
+    restart: unless-stopped
+
+
 volumes:
   wazuh_api_configuration:
   wazuh_etc:
