@@ -17,9 +17,16 @@ The Wazuh manager analyzes the data received from the agents. For processing the
 
 The Wazuh Dashboard is the web user interface for data visualization and analysis. It includes out-of-the-box dashboards for security events, regulatory compliance (e.g., PCI DSS, GDPR, CIS, HIPAA, NIST 800-53), detected vulnerable applications, file integrity monitoring data, configuration assessment results, cloud infrastructure monitoring events, and others. It is also used to manage Wazuh configuration and to monitor its status.
 
-## Config for Vulnerabilities
+## Configuring Wazuh-Manager for Vulnerability Detection & Centralizing Agent Management
 
-1. To configure the vulnerability module in Wazuh, you must edit the Wazuh Manager's shared agent.conf file at: ```/var/ossec/etc/shared/default/agent.conf```. 
+1. Before configuring the Wazuh-Manager, ensure that you have enabled remote commands in your wazuh agent ```/var/ossec/etc/local_internal_options.conf```
+
+Set: ```wazuh_command.remote_commands=1```
+   
+2. To configure the vulnerability module in Wazuh, you must first edit the Wazuh Manager's shared agent.conf file at: ```/var/ossec/etc/shared/default/agent.conf```. This configuration file is located in the shared directory, will allow the 
+
+*The shared.conf file within the Wazuh-Manager allows the Wazuh-Manager to remotely configure and manage your Wazuh agents. It is important to remember that the agent.conf file takes precedence over the ossec.conf file, but while scanning the agent, the manager node aggregates both.*
+   
 ```
 <wodle name="syscollector">
    <disabled>no</disabled>
@@ -29,7 +36,7 @@ The Wazuh Dashboard is the web user interface for data visualization and analysi
    <hotfixes>yes</hotfixes>
 </wodle>
 ```
-2. Next you will edit the Wazuh Manager's ossec.conf file at:```/var/ossec/etc/ossec.conf```
+3. Next you will edit the Wazuh Manager's ossec.conf file at:```/var/ossec/etc/ossec.conf```
 
 ```
 <vulnerability-detector>
@@ -59,7 +66,7 @@ The Wazuh Dashboard is the web user interface for data visualization and analysi
     </provider>
 ```
 
-3. Lastly, restart the Wazuh-Manager using ```systemctl restart wazuh-manager```
+4. Lastly, restart the Wazuh-Manager using ```systemctl restart wazuh-manager```
 
 # Kali Linux VM 
 To configure your Kali Linux machine to be scanned for vulnerabilities, you will need to extend support using the following code:
