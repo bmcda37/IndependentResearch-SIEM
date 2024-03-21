@@ -5,7 +5,7 @@ For this self-led project, I decided to configure a home SIEM lab using Wazuh. I
 - Linux File System
 - scp, ssh
 - Docker/Docker Compose configuration, Portaniner 
-- Networking Concepts: Subnetting, Port Forwarding, Virtualization Management
+- Networking Concepts: Subnetting, Firewall Configuration, Port Forwarding, Virtualization Management
 - Zero Trust Network Architecture
 - GitHub, GitHub Projects, Python, Bash, VScode, WSL
 
@@ -16,3 +16,4 @@ For this self-led project, I decided to configure a home SIEM lab using Wazuh. I
 - Virtual Machines: Kali Linux, Parrot
 - Twingate (ZTNA Solution) for remote access
 - Caldera- Threat simulation
+- pfsense Firewall
