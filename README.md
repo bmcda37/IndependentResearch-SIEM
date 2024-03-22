@@ -1,4 +1,4 @@
-# My Independent Research using SIEM technologies and integrations
+# Independent Research using SIEM technologies and integrations
 For this self-led project, I decided to configure a home SIEM lab using Wazuh. I am using the single-node option since I do not need more worker nodes for the volume of agents I will be installing. I implemented various technologies that I learned from my undergraduate, internships, and research to formulate a complete solution, allowing the completion of Use Case scenarios.
 
 ## Core competencies within the project:
