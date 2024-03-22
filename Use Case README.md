@@ -1,7 +1,7 @@
 # Resources
 - Red Team: Caldera VM
-- Blue Team: Wazuh VM
-- Victim: Ubuntu 20.04 VM
+- Blue Team: Wazuh-Cluster VM
+- Victim: Ubuntu 20.04 VM (Agent Machine)
 
 # Use Case 1
 ## Remote Agent Monitoring & Vulnerability Resolution
@@ -13,7 +13,12 @@ To complete the installation of my Wazuh-Agent, I followed the instructions foun
 
 <img width="958" alt="image" src="https://github.com/bmcda37/IndependentResearch-SIEM/assets/157663194/2048633f-66a7-4fb5-ae1d-1ace5049cb32">
 
+## Part 2: Querying for Vulnerabilities & Resolving PCI Alerts
 <img width="958" alt="image" src="https://github.com/bmcda37/IndependentResearch-SIEM/assets/157663194/b661d6b3-b127-422d-a338-62442d13030e">
+
+## PCI Top Alerts Needing Resolving
+<img width="958" alt="image" src="https://github.com/bmcda37/IndependentResearch-SIEM/assets/157663194/fb094afd-2406-47b0-b198-c51f7aa59d18">
+
 
 # Use Case 2
 ## Use Caldera to automate red team attacks
