@@ -21,6 +21,14 @@ To complete the installation of my Wazuh-Agent, I followed the instructions foun
 
 
 # Use Case 2
-## Use Caldera to automate red team attacks
-## Network Topology for Use Case
-<img width="335" alt="image" src="https://github.com/bmcda37/IndependentResearch-SIEM/assets/157663194/6d04e3b2-9852-4ed5-a981-7a90550455fc">
+## Failed Logon Attempts Visualization
+
+My second use case will show the dashboard created to show the failed number of login attempts by each user. To do this, we will use OpenSource's visualization platform, where I can create a custom table. 
+
+Within Wazuh, 
+
+<img width="958" alt="image" src="https://github.com/bmcda37/IndependentResearch-SIEM/assets/157663194/c8575e55-10e6-494f-adf5-0bb597a204b4">
+
+
+
+
