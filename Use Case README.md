@@ -27,7 +27,7 @@ My second use case will show the dashboard created to show the failed number of 
 
 Within Wazuh, 
 
-<img width="958" alt="image" src="https://github.com/bmcda37/IndependentResearch-SIEM/assets/157663194/c8575e55-10e6-494f-adf5-0bb597a204b4">
+<img width="958" alt="image" src="https://github.com/bmcda37/IndependentResearch-SIEM/assets/157663194/ba0aaa91-8e94-4655-8093-569c2c4cc5b0">
 
 
 
