@@ -22,7 +22,7 @@ To complete the installation of my Wazuh-Agent, I followed the instructions foun
 <img width="958" alt="image" src="https://github.com/bmcda37/IndependentResearch-SIEM/assets/157663194/fb094afd-2406-47b0-b198-c51f7aa59d18">
 
 ## Part 2: Remediating the Vulnerability
-In-progress for creating documentation showing steps...
+In progress for creating documentation showing steps...
 
 # Use Case 2
 ## Dashboard for Managing Failed Login Attempts
@@ -49,7 +49,7 @@ The below areas are in which I believe a SOC analyst or organization would gain 
 
 - Operational Efficiency: The dashboard streamlines the monitoring and analysis process, allowing security teams to efficiently manage and prioritize security incidents, ultimately optimizing resource allocation and operational effectiveness.
 
-## Writing the Query
+## Formulating a Query
 
 
 When retrieving data from the full_log artifact to populate my table with details regarding the user accounts that attempted access, I had to create a custom query. In this query, I employed Data Query Language (DQL) to initially target the full_log artifact. Subsequently, I refined the results by filtering for occurrences flagged with the "Authentication Failure" rule alert and ensured that the results within the table were linked to a user account on my agent's machine. This filtering mechanism enables me to sift through the full_log effectively, displaying only the relevant information pertinent to this particular use case. I did not decide to group the results by user account, because I felt that you would want to see how far apart each login attempt was from the previous failed login attempt.
