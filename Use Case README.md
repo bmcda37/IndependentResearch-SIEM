@@ -23,7 +23,7 @@ To complete the installation of my Wazuh-Agent, I followed the instructions foun
 # Use Case 2
 ## Failed Logon Attempts Visualization
 
-My second use case will show the dashboard created to show the failed number of login attempts by each user. To do this, we will use OpenSource's visualization platform, where I can create a custom table. 
+My second use case will show the dashboard created to show each user's failed number of login attempts. To do this, we will use OpenSource's visualization platform, where I can create a custom table. When creating my table, I will want to show the time the rule ran and collected in the system, the agent machine, which is the machine that the alert is relating to, the machine name, so it's easier identifiable, and the full log which will give us the information regarding the account that the user was trying to access. At the bottom of the dashboard, you will also see where I created a metric showing the total number of failed login attempts over the selected time. 
 
 Within Wazuh, 
 
