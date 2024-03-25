@@ -21,11 +21,31 @@ To complete the installation of my Wazuh-Agent, I followed the instructions foun
 
 
 # Use Case 2
+
+## Discritpion
+For my second use case, I'll demonstrate the dashboard designed to display the number of failed login attempts for each user. To achieve this, I will be utilizing an OpenSearch visualization module within Wazuh. This will allow for the creation of a customized table. In constructing this table, I intend to include the following fields:
+
+Time of data collection: This indicates when the rule was executed and data was gathered in the system.
+Agent machine: This identifies the specific machine associated with the triggered alert.
+Machine name: This provides an easily identifiable name for the machine.
+Full log: This field contains detailed information regarding the account that the user attempted to access.
+Additionally, at the bottom of the dashboard, you'll find a metric showcasing the total count of failed login attempts recorded during the selected time
+
+## Value
+This dashboard will add value to the organization by providing critical insights into security-related events such as failed login attempts. By visualizing data such as the time of data collection, agent machine, machine name, and the full log, the dashboard offers detailed information regarding the security event flagged. 
+
+The below areas are in which I believe a SOC analyst or organization would gain value from this dashboard:
+
+- Enhanced Visibility: It provides real-time visibility into security events, enabling quick identification and response to potential threats.
+
+- Improved Incident Response: With detailed information on failed login attempts, security teams can promptly investigate and mitigate security incidents, reducing the organization's exposure to risk.
+
+- Risk Mitigation: By monitoring and analyzing failed login attempts, the organization can proactively identify vulnerabilities and implement measures to strengthen security posture, minimizing the likelihood of successful unauthorized access.
+
+- Operational Efficiency: The dashboard streamlines the monitoring and analysis process, allowing security teams to efficiently manage and prioritize security incidents, ultimately optimizing resource allocation and operational effectiveness.
+
+
 ## Failed Logon Attempts Visualization
-
-My second use case will show the dashboard created to show each user's failed number of login attempts. To do this, we will use OpenSource's visualization platform, where I can create a custom table. When creating my table, I will want to show the time the rule ran and collected in the system, the agent machine, which is the machine that the alert is relating to, the machine name, so it's easier identifiable, and the full log which will give us the information regarding the account that the user was trying to access. At the bottom of the dashboard, you will also see where I created a metric showing the total number of failed login attempts over the selected time. 
-
-Within Wazuh, 
 
 <img width="958" alt="image" src="https://github.com/bmcda37/IndependentResearch-SIEM/assets/157663194/ba0aaa91-8e94-4655-8093-569c2c4cc5b0">
 
