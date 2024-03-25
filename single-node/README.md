@@ -1,3 +1,6 @@
+# My Changes
+Note these are not the original configuration of yml files from Wazuh. I customized the scripts to work for my home lab. I added the agent.conf file and the insert within the file. Within the Wazuh_Cluster.conf file, I added the vulnerability scanning configuration which is outlined in my Wazuh README.md explaining the steps I took and reasoning behind each step. Within the docker-compose.yml file I added the configurations for my twinggate connector which utilizes ZTNO which allows me to access my Wazuh Cluster remotely.
+
 # Deploy Wazuh using Docker for single-node configuration
 
 This deployment is defined in the `docker-compose.yml` file with one Wazuh manager container, one Wazuh indexer container, and one Wazuh dashboard container. It can be deployed by following these steps: 
