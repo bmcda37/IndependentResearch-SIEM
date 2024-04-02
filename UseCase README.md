@@ -24,6 +24,13 @@ For this example, I chose to resolve vulnerability was CVE 2016-1585. The reason
 
 <img width="958" alt="image" src="https://github.com/bmcda37/IndependentResearch-SIEM/assets/157663194/fb094afd-2406-47b0-b198-c51f7aa59d18">
 
+The PCI report shows us the rules for our systems regarding the PCI compliance standard. For my current Ubuntu machine, there are rules, and "controls", that need to be in place on your system. However, in the report, you see that for requirement 2.2, we have several flags. These flags show us what we need to fix on our machine if we want the system to comply with PCI standards. For this example, we will focus on the flag for "/etc/shadow password fields are not empty". To resolve this issue, first I will ```cat /etc/shadow```. This will open the shadow file which shows encrypted hashes for my user accounts. 
+
+*Note the information below has been replaced with synthetic information and not my actual information*
+
+```user1:$y$j9T$92Y4MVdu5OH.D6fdQbhTz0$OxoGAO7ak6CpxTD55VN3x1g9/I1Lk.SDnYI.nSZ4Wj3:19783:0:99999:7:::dnsmasq:*::0:99999:7:::```
+In this example, I replaced the empty password for my user, "user1". To do this I needed to set a password for the user by using passwd cmd to set a password. After the password hash, you will see other rules associated with my user account which are set in my pam.d configuration file. Once the password is set, the password hash is then stored in the shadow file fulfilling the PCI requirement. It is important for your accounts to have passwords for many reasons. Passwords add a layer of security by adding authentication for users verifying their identity before gaining access to the system. This helps to ensure that the user signing into the account is not a different user trying to access the machine from a different user accounts. This also helps add accountability among your users as each action performed by the user can be traced back to that users unique ID.
+
 # Use Case 2
 ## Dashboard for Managing Failed Login Attempts
 
