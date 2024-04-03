@@ -1,4 +1,12 @@
-# Configuration of Docker Compose, Docker Bridge Network, &  Port Forwarding
+# General Network Topology
+
+![image](https://github.com/bmcda37/IndependentResearch-SIEM/assets/157663194/22ad92d4-d3e8-45c2-8463-da13d5cba2c0)
+
+For my network, I first needed to configure my pfsense firewall VM so I could then create different VLANs within my different network for more realistic use case scenarios. I have 3 VLANs, VLAN 1- SIEM and FW monitoring network, VLAN 2- Kali Linux aka Attacker network, & VLAN 3- Windows and other Linux Machines acting as my Victum network. This segmentation of my network provides a more realistic topology to what can be found in a real-world environment while also practicing security best practices. I will also be able to monitor my pfsense within my SIEM as it will also generate logs. 
+
+*Note this topology is subject to change and will add/remove VMs based on further development of my lab.*
+
+# Configuration of Docker Compose & Docker Bridge Network
 
 ## Purpose
 
