@@ -7,13 +7,12 @@ For my independent research study, I decided to configure a home SIEM lab using 
 - Configuring Docker & Docker Compose configuration, along with managing containers using Portaniner 
 - Networking Concepts: Subnetting, Firewall Configuration, Port Forwarding, Virtualization Management
 - Zero Trust Network Architecture
-- Programming skills in Python and Bash scripting, alongside familiarity with tools like VScode and WSL
 
 ## Technologies used within the project:
 - Docker: Employed Docker Compose for hosting Wazuh Stack
 - Wazuh Stack: Single-Node configuration consisting of Wazuh Manager, Wazuh Indexer, & Wazuh Dashboard
 - XCP-ng: Server hosting VMs
-- Virtual Machines: Kali Linux, Parrot, Ubuntu
+- Virtual Machines: Kali Linux & Ubuntu
 - Twingate (ZTNA Solution) for remote access
 - Caldera- Threat simulation
 - pfsense Firewall
