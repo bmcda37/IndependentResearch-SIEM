@@ -81,11 +81,11 @@ Caldera enables me to replicate attacks according to the MITRE ATT&CK framework,
 Below you will see the description of how abilities within Caldera function. Simply put, abilities are ways that the Caldera agent will "attack" your agent machine based on the MITRE framework. Using abilities, I will choose an ATT&CK method to simulate so I can then formulate my rule to help notify me if this attack was ever present in my systems.
 ![image](https://github.com/bmcda37/IndependentResearch-SIEM/assets/157663194/ae3c11cb-d7c3-4d32-9534-2d5506522237)
 
-For this use case, I will be focusing on the "Persistence" techniques simulating abilities T1136- Creating a user account & T1053- Cron, replacing cron tab with a reference file.
+For this use case, I will be focusing on the "Persistence" techniques simulating abilities T1136- Creating a user account & T1053- Cron, replacing the cron tab with a reference file.
 
 ## MITRE ATT&CK Technique Description:
-T1136 (Creating an Account): Adversaries may create an account to maintain access to victim systems. With a sufficient level of access, creating such accounts may be used to establish secondary credentialed access that do not require persistent remote access tools to be deployed on the system
-T1053 (Scheduled Task Jobs): Adversaries may abuse task scheduling functionality to facilitate initial or recurring execution of malicious code. Adversaries may use task scheduling to execute programs at system startup or on a scheduled basis for persistence
+T1136 (Creating an Account): Adversaries may create an account to maintain access to victim systems. With a sufficient level of access, creating such accounts may be used to establish secondary credentialed access that does not require persistent remote access tools to be deployed on the system
+T1053 (Scheduled Task Jobs): Adversaries may abuse task scheduling functionality to facilitate the initial or recurring execution of malicious code. Adversaries may use task scheduling to execute programs at system startup or on a scheduled basis for persistence
 
 
-
+After running the Caldera Operations, I was able to see the findings within my Caldera interface. All my operations were successful in uncovering the information on my agent machine, however, the threats were not all discovered by Wazuh. For example, the detection of a bash script being executed was being run, however, the operation testing to see if the Caldera agent could uncover my password policies & sensitive files on my system although successful from Caldera's standpoint, was not detected by Wazuh. Since Wazuh is not detecting these MITRE ATT&CK techniques, I will need to add cu
