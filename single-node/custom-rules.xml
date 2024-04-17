@@ -1,0 +1,48 @@
+<!-- 
+
+-->
+<!--
+    Groups categorize your alerts. syscheck, attack, & syslog are a few.
+   
+    Rules can have level 0-16, id 1-999999, maxsize 1-9999, frequency 2-9999, timeframe, ignor, overwrite,
+    overlook.
+   
+    Match- Used to trigger the rule. It will search the log event for your 
+    specified match value.
+   
+    if_sid- A list of rule IDs seperatred by commas or spaces.
+   
+    PCRE2 syntax is used for regex.
+-->
+<rules>
+    <!-- 
+        This rule will trigger if the event has a sid of 550 and the file field ends in .sh
+        and the changed_fields field is permission and the perm field is set to rwx.
+    -->
+    <group name="syscheck">
+        <rule id="100002" level="8">
+            <if_sid>550</if_sid>
+            <field name="file">.sh$</field>
+            <field name="changed_fields">^permission$</field>
+            <field name="perm" type="pcre2">\w\wx</field>
+            <description>Execute permission added to shell script.</description>
+            <mitre>
+                <id>T1222.002</id>
+            </mitre>
+        </rule>
+    </group>
+    <!--
+        This rule will trigger if an device has a network scanning tool is installed on the device.
+    -->
+    <group name="defualt">
+        <rule id="100003" level="9">
+            <match type="pcre2">(?i)(tshark|wireshark)</match>
+            <description>Network sniffing tool discovered.</description>
+            <mitre>
+                <id>T1040</id>
+            </mitre>
+        </rule>
+    </group>
+
+
+</rules>
