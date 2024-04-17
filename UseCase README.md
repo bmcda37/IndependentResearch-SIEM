@@ -71,7 +71,7 @@ When retrieving data from the full_log artifact to populate my table with detail
 
 <img width="958" alt="image" src="https://github.com/bmcda37/IndependentResearch-SIEM/assets/157663194/ba0aaa91-8e94-4655-8093-569c2c4cc5b0">
 
-# Use Case 3 (Currently in process of finalizing documentation)
+# Use Case 3 (Currently in the process of finalizing documentation)
 ## Simulating an attack with Caldera & Formulating Rules Within Wazuh
 
 Caldera enables me to replicate attacks according to the MITRE ATT&CK framework, aiding in the creation of rules within my SIEM (Wazuh). This enhances the detection of adversaries within my systems. MITRE ATT&CK serves as a repository of adversary tactics and techniques derived from real-world observations. It forms the basis for constructing specific threat models and methodologies across various sectors, including private industry, government, and the cybersecurity product and service domain. Through the implementation of rules designed to identify these simulated attacks, we enable thorough detection of potential exploits employed by attackers.
@@ -87,5 +87,8 @@ For this use case, I will be focusing on the "Persistence" techniques simulating
 T1136 (Creating an Account): Adversaries may create an account to maintain access to victim systems. With a sufficient level of access, creating such accounts may be used to establish secondary credentialed access that does not require persistent remote access tools to be deployed on the system
 T1053 (Scheduled Task Jobs): Adversaries may abuse task scheduling functionality to facilitate the initial or recurring execution of malicious code. Adversaries may use task scheduling to execute programs at system startup or on a scheduled basis for persistence
 
+## Results:
+After running the Caldera Operations, I was able to see the findings within my Caldera interface. All my operations were successful in uncovering the information on my agent machine, however, the threats were not all discovered by Wazuh. For example, the detection of a bash script being executed was being run, however, the operation testing to see if the Caldera agent could uncover my password policies & sensitive files on my system although successful from Caldera's standpoint, was not detected by Wazuh. Since Wazuh is not detecting these MITRE ATT&CK techniques, I will need to add custom rules so that my Wazuh manager is detecting these tactics.
 
-After running the Caldera Operations, I was able to see the findings within my Caldera interface. All my operations were successful in uncovering the information on my agent machine, however, the threats were not all discovered by Wazuh. For example, the detection of a bash script being executed was being run, however, the operation testing to see if the Caldera agent could uncover my password policies & sensitive files on my system although successful from Caldera's standpoint, was not detected by Wazuh. Since Wazuh is not detecting these MITRE ATT&CK techniques, I will need to add cu
+## Rules: Refer to the custom-rule.xml file in the single-node folder for custom rule configurations.
+When creating custom rules in Wazuh you will need to use the proper syntax to ensure you are referencing the proper fields pulled from the Wazuh decoders. For this Use Case, I ensured to add the "Mitre" tag and included the Mitre "technique id". I also created a few custom rules relating to the NIST framework ensuring compliance and proper   file integrity monitoring awareness.
