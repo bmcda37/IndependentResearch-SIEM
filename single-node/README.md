@@ -23,7 +23,7 @@ $ docker-compose up -d
 Once you run the docker-compose file, you will begin to see the Docker containers images being pulled. You will also see the volumes being created for each docker container along with the additional API volumes created such as filebeat.
 
 
-# Custom-Rules
+# Custom-Rules File
 
 This file contains the custom-rules I created for my SIEM to better alert me of threats I simulate using Caldera, or alerts I manually trigger by changing files or other instances I think of.
 
